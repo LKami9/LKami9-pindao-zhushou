@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Modules": [
+    {
+      "InternalName": "LKami9ChannelWhisperGuard",
+      "Name": "国服频道私聊守卫",
+      "Author": "LKami9",
+      "Description": "监听 Omni 国服频道私聊，正文命中指定内容后自动登出游戏，也可以只提醒。",
+      "Version": "1.0.3",
+      "MinimumOmniVersion": "1.1.8.0",
+      "File": "Modules/LKami9ChannelWhisperGuard.cs",
+      "Sha256": "08A795BEC338B0C6D53A78F16DBB0273DC323DCB8063D7D76F9EFE915D7EC9DD"
+    }
+  ]
+}
