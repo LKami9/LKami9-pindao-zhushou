@@ -3,13 +3,19 @@
   "Modules": [
     {
       "InternalName": "LKami9ChannelWhisperGuard",
-      "Name": "国服频道私聊守卫",
       "Author": "LKami9",
-      "Description": "监听 Omni 国服频道私聊，正文命中指定内容后自动登出游戏，也可以只提醒。",
-      "Version": "1.0.3",
-      "MinimumOmniVersion": "1.1.8.0",
+      "RepositoryURL": "https://github.com/LKami9/LKami9-pindao-zhushou",
+      "Version": "2.0.0",
+      "ApiVersion": 1,
+      "MinimumOmniVersion": "1.1.8.2",
       "File": "Modules/LKami9ChannelWhisperGuard.cs",
-      "Sha256": "08A795BEC338B0C6D53A78F16DBB0273DC323DCB8063D7D76F9EFE915D7EC9DD"
+      "Sha256": "D5A2E223D80DBF9E3B4DC4DF80497193C131C285390B45377000823B94AD4D61",
+      "Localization": {
+        "Source": {
+          "Title": "国服频道私聊守卫",
+          "Description": "监听 Omni 国服频道私聊，正文命中指定内容后自动登出游戏，也可以只提醒。"
+        }
+      }
     }
   ]
 }

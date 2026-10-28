@@ -34,7 +34,7 @@ https://raw.githubusercontent.com/<你的账号>/LKami9-cn-channel-guard/main/Tr
 4 登出          ICommandManager.ProcessCommand("/logout")
 ```
 
-为什么不直接调接口：在线模块只拿到 `ModuleBase` + Dalamud 服务，Omni 没有公开国服频道 API，所以第 1 步只能用反射。
+为什么不直接调接口：在线模块只拿到 `OmniModuleBase` + Dalamud 服务，Omni 没有公开国服频道 API，所以第 1 步只能用反射。
 
 为什么按嵌套类型名认：Omni 的 `OmniToolbox.Tree.dll` 做过混淆，顶层类名是随机串（当前是 `eSs8PyYWSfhkmesgIyu`），
 但嵌套的 `ChannelWhisper / ChannelMessage / ChannelEvent` 名字没变，认这个名字比认随机类名稳。
@@ -113,6 +113,14 @@ root -> Plugin.host -> OmniHost.featureLifetime -> FeatureLifetime.disposers
   而是 1.0.1 之前只认单个 `Type`（Omni 重载后旧 Assembly 的同名类型仍在 AppDomain 里）。
 
 ## 更新记录
+
+### 2.0.0
+
+- 迁移到 Omni 在线模块 **API 1**（宿主 1.1.8.2 起强制）：
+  `ModuleBase` → `OmniModuleBase` + `[ModuleApiVersion(1)]`，
+  `OnEnable/OnDisable/OnDispose` → `OnStart(FeatureLifetime)/OnStop/OnDestroy`（事件订阅改由 `activation.OnStopping` 解绑），
+  界面文字改由 `ModuleLocalization` 词条 + `OmniLoc.Get` 提供，状态串改成「键 + 参数 + 是否异常」。
+- 反射定位逻辑（类型识别、对象图遍历、后台扫描）未改动；配置 JSON 键与 InternalName 不变，升级不丢设置。
 
 ### 1.0.3
 
