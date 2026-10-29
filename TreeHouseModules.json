@@ -5,11 +5,11 @@
       "InternalName": "LKami9ChannelWhisperGuard",
       "Author": "LKami9",
       "RepositoryURL": "https://github.com/LKami9/LKami9-pindao-zhushou",
-      "Version": "2.0.0",
+      "Version": "2.0.1",
       "ApiVersion": 1,
       "MinimumOmniVersion": "1.1.8.2",
       "File": "Modules/LKami9ChannelWhisperGuard.cs",
-      "Sha256": "D5A2E223D80DBF9E3B4DC4DF80497193C131C285390B45377000823B94AD4D61",
+      "Sha256": "56856402CB2B2D21A44030733AE0BB08E27047C5C0383F6D39C13D93B7B1C770",
       "Localization": {
         "Source": {
           "Title": "国服频道私聊守卫",
